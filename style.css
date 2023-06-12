@@ -1,0 +1,315 @@
+body{
+    color: lime;
+    text-align: center;
+    background-color: #000000;
+    font-family: monospace;
+    border: 2px;
+    /* border-color: red; */
+}
+.robot{
+    height: 500px;
+    border: 2px solid red;
+}
+.head{
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+    background-color: lime;
+    border-radius: 200px 200px 0 0 ;
+    border-bottom: 10px;
+
+    transition: width 2s ease;
+}
+.robot:hover .head{
+    /* width: 290px; */
+    animation: movehead 2s infinite;
+}
+@keyframes movehead{
+    0%
+    {
+        width: 200px;
+    }
+    25%
+    {
+        width: 300px;
+    }
+    50%
+    {
+        width: 200px;
+    }
+    75%
+    {
+        width: 200px;
+    }
+
+}
+.eye{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    margin-top: 90px;
+}
+.leye{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(28, 27, 27);
+    border-radius: 50px;
+    display: inline-block;
+    transition: transform 1s ease-in-out;
+}
+.robot:hover .leye{
+    transform: translateX(-20px);
+    animation: moveleye 2s infinite;
+}
+@keyframes moveleye{
+    0%
+    {
+        transform: translateX(0px);
+    }
+    25%
+    {
+        transform: translateX(-30px);
+    }
+    50%
+    {
+        transform: translateX(0px);
+    }
+    75%
+    {
+        transform: translateX(-30px);
+    }
+    100%
+    {
+        transform: translateX(0px);
+    }
+}
+.reye{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(24, 23, 23);
+    border-radius: 50px;
+}
+.robot:hover .reye{
+    transform: translateX(-20px);
+    animation: movereye 2s infinite;
+}
+@keyframes movereye{
+    0%
+    {
+        transform: translateX(0px);
+    }
+    25%
+    {
+        transform: translateX(-30px);
+    }
+    50%
+    {
+        transform: translateX(0px);
+    }
+    75%
+    {
+        transform: translateX(-30px);
+    }
+    100%
+    {
+        transform: translateX(0px);
+    }
+}
+.body1{
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+}
+.larm{
+    background-color: lime;
+    margin-right: 10px;
+    width: 40px;
+    height: 120px;
+    border-radius: 100px;
+    margin-top: 20px;
+    transition: transform 1s ease-in-out;
+}
+.robot:hover .larm{
+    transform: rotate(90deg);
+    transform-origin: top center;
+    animation: movelarm 2s infinite;
+}
+@keyframes movelarm{
+    0%
+    {
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    25%
+    {
+        transform:  rotate(90deg);
+        transform-origin: top center;
+    }
+    50%
+    {
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    75%
+    {
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.center{
+    width: 200px;
+    height: 200px;
+    border-radius: 0 0 50px 50px;
+    background-color: lime;
+    margin-top: 10px;
+}
+.robot:hover .center{
+    border-radius: 80px;
+    transform: rotate(270deg);
+    animation: movecenter 1s infinite;
+}
+@keyframes movecenter{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.rarm{
+    width: 40px; 
+    height: 120px;
+    background-color: lime;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 100px;
+    transition: transform 1s ease-in-out;
+
+}
+.robot:hover .rarm{
+    transform: rotate(90deg);
+    transform-origin: top center;
+    animation: moverarm 2s infinite;
+}
+@keyframes moverarm{
+    0%
+    {
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    25%
+    {
+        transform:  rotate(90deg);
+        transform-origin: top center;
+    }
+    50%
+    {
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    75%
+    {
+        transform: rotate(-90deg);
+        transform-origin: top center;
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.leg{
+    display: flex;
+    width: 150px;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.lleg{
+    width: 40px;
+    height: 125px;
+    background-color: lime;
+    border-radius: 50px;
+}
+.robot:hover .lleg{
+    transform: rotate(19deg);
+    animation: movelleg 2s infinite;
+}
+@keyframes movelleg{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    25%
+    {
+        transform: rotate(40deg);
+    }
+    50%
+    {
+        transform: rotate(0deg);
+    }
+    75%
+    {
+        transform: rotate(40deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+.rleg{
+    width: 40px;
+    height: 125px;
+    background-color: lime;
+    border-radius: 50px;
+}
+.robot:hover .rleg{
+    transform: rotate(19deg);
+    animation: moverleg 2s infinite;
+}
+@keyframes moverleg{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    25%
+    {
+        transform: rotate(40deg);
+    }
+    50%
+    {
+        transform: rotate(0deg);
+    }
+    75%
+    {
+        transform: rotate(-40deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+h1{
+    position: relative;
+    font-family: Impact, sans-serif;
+    font-size: 45px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #fad816, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 2s infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
